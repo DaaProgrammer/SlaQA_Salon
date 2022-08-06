@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './screens/onboard_screens/splash.dart';
+import 'package:slaqa/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,21 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Splashscreen(),
+      home: const SplashScreen(),
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: (settings) => generateRoute(settings),
     );
-  }
-}
-
-class Splashscreen extends StatefulWidget {
-  const Splashscreen({Key? key}) : super(key: key);
-
-  @override
-  State<Splashscreen> createState() => _SplashscreenState();
-}
-
-class _SplashscreenState extends State<Splashscreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
